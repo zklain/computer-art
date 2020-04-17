@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <title>Space Curves</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        font-family: 'Fira Mono', monospace;
+      }
+
+      .order-input {
+        height: 4rem;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>lines </h1>
+      <label for="order">order: </label>
+      <div id="order-out"></div>
+      <input type="range" min="1" max="10" value="2" name="order" id="order" />
+    </div>
+    <script src="./lines.js"></script>
+  </body>
+</html>
