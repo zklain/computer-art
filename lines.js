@@ -1,10 +1,6 @@
-// const No1 = require('./no1');
-// import no1 from './no1';
-
-// todo: No. 3: create zoom to it, move them "in the time" (tunnel like)
-
 const SIZE = 512;
-
+const BLICK = 3;
+const OF_LINES = 15;
 function setup() {
   createCanvas(SIZE, SIZE);
   colorMode(HSB, 360, 255, 255);
@@ -17,14 +13,14 @@ function draw() {
   const y1 = y(t);
   stroke(255);
   translate(SIZE / 2, SIZE / 2);
-  for (let i = 0; i < 30; i++) {
-    line(x1 + i * 20, y1 + i, -(x1 + i), -(y1 + i * 10));
+  for (let i = 0; i < OF_LINES; i++) {
+    line(x1 + i * -20, y1 + i, (x1 + i), -(y1 + i * 10));
   }
 
-  if (t % 20 === 0) {
-    background(0);
-    // t = 0;
-  }
+ if (t % BLICK  === 0) {
+     background(0);
+   //t = 0;
+ }
 
   t++;
 }
@@ -34,16 +30,9 @@ const x = (t) => {
 };
 
 const y = (t) => {
-  return cos(t / 40) * 200;
+  return cos(t / 20) * 200;
 };
 
-// todo: circle movement
-// todo: line
-// todo: multiple lines
-
-// todo: create array of function types
-// todo: create swtich, whihc would assign combinations for the line coordinates
-// todo: the functions will change every 100t
 
 // const No1 = (t) => {
 //   const x = (t) => {
